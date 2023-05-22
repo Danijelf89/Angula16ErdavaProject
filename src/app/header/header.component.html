@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <div fxFlex fxLayoutAlign="center center" class="expand-and-position">
+      <mat-label>
+        {{ welcomeMessage }}
+      </mat-label>
+    </div>
+    <div fxFlex fxLayoutAlign="flex-end center">
+      <button mat-raised-button color="primary" (click)="logout()">
+        Logout
+      </button>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

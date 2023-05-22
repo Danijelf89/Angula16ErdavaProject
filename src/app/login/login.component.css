@@ -1,0 +1,58 @@
+.login-form {
+    height: 200px;
+    width: 400px;
+  
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+  }
+  
+  .margin-top {
+    margin-top: 5px;
+  }
+  
+  .center-alligment {
+    text-align: center;
+    border: 10px;
+  }
+  
+  .mat-toolbar-row {
+    justify-content: center;
+  }
+  
+  .allign-footer-center {
+    text-align: center;
+  }
+  
+  .signIn-LogIn-buttons{
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+  }
+  
+  .take-all-space{
+      width: -webkit-fill-available;
+  }
+  
+  .footer{
+      position: fixed;
+  bottom: 0;
+  }
+  
+  .padding-card{
+    padding: 5px;
+  }
+  
+  ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: #fff;
+  }
+  ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    border-radius: 4px;
+    padding: 0.75em 0.75em 0 0.75em;
+    border: 1px solid #f94747;
+  }
+  
+  
+  

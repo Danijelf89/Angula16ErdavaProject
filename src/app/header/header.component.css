@@ -1,0 +1,8 @@
+.justify-center{
+    justify-content: center;
+}
+
+.expand-and-position{
+    width: -webkit-fill-available;
+    text-align: center;
+}
