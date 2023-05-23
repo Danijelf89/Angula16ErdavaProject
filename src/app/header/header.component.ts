@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HeaderService } from './header.service';
 
 @Component({
   selector: 'app-header',
@@ -7,14 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  welcomeMessage = localStorage.getItem('username');
+  welcomeMessage$ = this.service.userName$;
 
-  constructor(private router: Router) {}
+  constructor(private service: HeaderService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.service.loadUserData();
+  }
 
   logout() {
-    localStorage.clear();
-    this.router.navigate(['login']);
+    this.service.logout();
   }
 }

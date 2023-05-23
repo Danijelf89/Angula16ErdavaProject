@@ -7,6 +7,7 @@ import { LoginComponent } from './login.component';
 import { SharedModule } from '../share/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterModule } from '../footer/footer.module';
+import { LoginService } from './login.service';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { FooterModule } from '../footer/footer.module';
     ReactiveFormsModule,
     FooterModule
 
-  ]
+  ],
+  providers:[LoginService]
 })
 export class LoginModule { }

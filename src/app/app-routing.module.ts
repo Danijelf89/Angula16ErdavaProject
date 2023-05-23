@@ -27,7 +27,7 @@ const routes: Routes = [
   JwtModule.forRoot({
     config: {
       tokenGetter: tokkentGetter,
-      allowedDomains: ["localhost:52378"],
+      allowedDomains: ["localhost:52907"],
       disallowedRoutes: []
     }
   }),],

@@ -2,7 +2,7 @@
   <mat-toolbar-row>
     <div fxFlex fxLayoutAlign="center center" class="expand-and-position">
       <mat-label>
-        {{ welcomeMessage }}
+        {{ welcomeMessage$ | async}}
       </mat-label>
     </div>
     <div fxFlex fxLayoutAlign="flex-end center">

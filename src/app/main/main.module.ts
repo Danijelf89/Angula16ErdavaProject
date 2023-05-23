@@ -6,6 +6,8 @@ import { MainComponent } from './main.component';
 import { SharedModule } from '../share/shared.module';
 import { FooterModule } from '../footer/footer.module';
 import { HeaderModule } from '../header/header.module';
+import { MatButtonModule } from '@angular/material/button';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { HeaderModule } from '../header/header.module';
     SharedModule,
     MainRoutingModule,
     HeaderModule,
-    FooterModule
+    FooterModule,
+    MatButtonModule,
+    MatGridListModule
   ]
 })
 export class MainModule { }
