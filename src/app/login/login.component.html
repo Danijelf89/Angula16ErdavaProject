@@ -1,43 +1,46 @@
 <mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <mat-label>Login page</mat-label>
-    </mat-toolbar-row>
-  </mat-toolbar>
+  <mat-toolbar-row>
+    <div fxFlex fxLayoutAlign="center center" class="expand-and-position">
+        <mat-label>{{ "LOGIN_FORM.LOGIN_PAGE" | translate }}</mat-label>
+    </div>
+    
   
-  <div class="login-form" flex-direction="column">
-    <mat-grid-list cols="1" rowHeight="60">
-      <form [formGroup]="userData">
-        <mat-form-field class="take-all-space" appearance="outline">
-          <mat-label>Username</mat-label>
-          <input matInput placeholder="Username" formControlName="username" />
-        </mat-form-field>
-  
-        <mat-form-field class="take-all-space" appearance="outline">
-          <mat-label>Password</mat-label>
-          <input
-            matInput
-            placeholder="Password"
-            type="password"
-            formControlName="password"
-          />
-        </mat-form-field>
-      </form>
-      <div class="signIn-LogIn-buttons">
-        <button
-          mat-raised-button
-          color="primary"
-          [disabled]="!userData.valid"
-          (click)="LogIn()"
-        >
-          Log In
-        </button>
-        <button mat-raised-button color="primary">Sign up</button>
-      </div>
-    </mat-grid-list>
-  </div>
-  <mat-toolbar class="footer">
-    <mat-toolbar-row>
-      <app-footer></app-footer>
-    </mat-toolbar-row>
-  </mat-toolbar>
-  
+
+  <div fxFlex fxLayoutAlign="flex-end center">
+    <app-localization></app-localization>
+</div>
+
+</mat-toolbar-row>
+</mat-toolbar>
+
+<div class="login-form" flex-direction="column">
+  <mat-grid-list cols="1" rowHeight="60">
+    <form [formGroup]="userData">
+      <mat-form-field class="take-all-space" appearance="outline">
+        <mat-label>{{ "LOGIN_FORM.USERNAME" | translate }}</mat-label>
+        <input matInput formControlName="username" />
+      </mat-form-field>
+
+      <mat-form-field class="take-all-space" appearance="outline">
+        <mat-label>{{ "LOGIN_FORM.PASSWORD" | translate }}</mat-label>
+        <input matInput type="password" formControlName="password" />
+      </mat-form-field>
+    </form>
+    <div class="signIn-LogIn-buttons">
+      <button
+        mat-raised-button
+        color="primary"
+        [disabled]="!userData.valid"
+        (click)="LogIn()"
+      >
+        {{ "LOGIN_FORM.LOGIN" | translate }}
+      </button>
+      <button mat-raised-button color="primary">{{ "LOGIN_FORM.SIGN_IN" | translate }}</button>
+    </div>
+  </mat-grid-list>
+</div>
+<mat-toolbar class="footer">
+  <mat-toolbar-row>
+    <app-footer></app-footer>
+  </mat-toolbar-row>
+</mat-toolbar>

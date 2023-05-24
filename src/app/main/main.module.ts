@@ -8,6 +8,7 @@ import { FooterModule } from '../footer/footer.module';
 import { HeaderModule } from '../header/header.module';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     HeaderModule,
     FooterModule,
     MatButtonModule,
-    MatGridListModule
+    MatGridListModule,
+    TranslateModule
   ]
 })
 export class MainModule { }

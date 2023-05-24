@@ -1,0 +1,14 @@
+
+  
+
+    <mat-form-field class="test" >
+  <mat-select
+    [value]="(selectedLanguage$ | async)!"
+    (selectionChange)="changedLanguage($event)"
+  >
+    <mat-option  *ngFor="let language of languages$ | async" [value]="language">
+      {{language.label}}
+    </mat-option>
+  </mat-select>
+    </mat-form-field>
+

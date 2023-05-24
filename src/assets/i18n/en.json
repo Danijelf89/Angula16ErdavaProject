@@ -1,0 +1,19 @@
+{
+    "HOME": {
+        "LOGOUT": "Logout",
+        "ENG": "ENG",
+        "SER_LAT": "SRB"
+    },
+
+    "LOGIN_FORM": {
+        "LOGIN_PAGE" : "Login page",
+        "LOGIN": "Login",
+        "SIGN_IN":"Sign in",
+        "USERNAME": "Username",
+        "PASSWORD": "Password"
+    },
+
+    "MAIN_FORM":{
+        "REQUEST_PART": "Request a part to work with"
+    }
+}

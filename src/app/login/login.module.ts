@@ -8,6 +8,8 @@ import { SharedModule } from '../share/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterModule } from '../footer/footer.module';
 import { LoginService } from './login.service';
+import { TranslateModule } from '@ngx-translate/core';
+import { LocalizationModule } from '../localization/localization.module';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { LoginService } from './login.service';
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
-    FooterModule
+    FooterModule,
+    TranslateModule,
+    LocalizationModule
 
   ],
   providers:[LoginService]

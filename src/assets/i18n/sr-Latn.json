@@ -1,0 +1,19 @@
+{
+    "HOME": {
+        "LOGOUT": "Odjavi se",
+        "ENG": "ENG",
+        "SER_LAT": "SRP"
+    },
+
+    "LOGIN_FORM": {
+        "LOGIN_PAGE" : "Prijava",
+        "LOGIN": "Prijavi se",
+        "SIGN_IN":"Napravi nalog",
+        "USERNAME": "Korisnicko ime",
+        "PASSWORD": "Sifra"
+    },
+
+    "MAIN_FORM":{
+        "REQUEST_PART": "Zahtevaj deo"
+    }
+}

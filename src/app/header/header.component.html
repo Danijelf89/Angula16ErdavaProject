@@ -6,8 +6,12 @@
       </mat-label>
     </div>
     <div fxFlex fxLayoutAlign="flex-end center">
+        <app-localization></app-localization>
+    </div>
+    <div fxFlex fxLayoutAlign="flex-end center">
+        
       <button mat-raised-button color="primary" (click)="logout()">
-        Logout
+        {{ 'HOME.LOGOUT' | translate }}
       </button>
     </div>
   </mat-toolbar-row>
