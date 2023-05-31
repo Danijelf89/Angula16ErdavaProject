@@ -1,22 +1,111 @@
-<app-header></app-header>
+<div class="header">
+  <app-header></app-header>
+</div>
 
-<mat-toolbar class="footer">
-  <mat-toolbar-row class="justify-center">
-    <app-footer></app-footer>
-  </mat-toolbar-row>
-</mat-toolbar>
+<div class="parrent">
+  <div class="child1">
+    <mat-card>
+      <mat-card-header>
+        <mat-label class="allign-center take-all-space">Buffer</mat-label>
+      </mat-card-header>
 
-<div class="login-form" flex-direction="column">
-    <mat-grid-list cols="1" rowHeight="60">
-      
-        <button mat-raised-button color="primary" class="take-all-space">
-            {{ "MAIN_FORM.REQUEST_PART" | translate }}
-          </button>
+      <table mat-table [dataSource]="(dataSourceParts$ |async)!">
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>Id.</th>
+          <td mat-cell *matCellDef="let bufferPart">{{ bufferPart.id }}</td>
+        </ng-container>
 
-         
-    </mat-grid-list>
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let bufferPart">{{ bufferPart.name }}</td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="partNumber">
+          <th mat-header-cell *matHeaderCellDef>Part number</th>
+          <td mat-cell *matCellDef="let bufferPart">{{ bufferPart.partNumber }}</td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef>Status</th>
+          <td mat-cell *matCellDef="let bufferPart">
+            <mat-icon *ngIf="bufferPart.status == 'Avaliable'">thumb_up</mat-icon>
+            <mat-icon *ngIf="bufferPart.status == 'In error'">thumb_down</mat-icon>
+            {{bufferPart.status}}
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </mat-card>
   </div>
 
+  <div class="child2">
+    <button
+      mat-raised-button
+      color="primary"
+      class="buttonVertMiddle"
+      matTooltip="Finish working on this part"
+      (click)="addWorkingPart()"
+    >
+      >
+    </button>
+  </div>
 
+  <div class="child3">
+    <mat-card>
+      <mat-card-header>
+        <mat-label class="allign-center take-all-space">Working on</mat-label>
+      </mat-card-header>
 
+      <table mat-table [dataSource]="(dataSourcePartWorking$ | async)!">
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>Id</th>
+          <td mat-cell *matCellDef="let workingPart">{{ workingPart.id }}</td>
+        </ng-container>
 
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let workingPart">{{ workingPart.name }}</td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="partNumber">
+          <th mat-header-cell *matHeaderCellDef>Part number</th>
+          <td mat-cell *matCellDef="let workingPart">{{ workingPart.partNumber }}
+
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="button">
+          <th mat-header-cell *matHeaderCellDef>Actions</th>
+          <td mat-cell *matCellDef>
+            <button
+              mat-fab
+              color="primary"
+              class="fab-button-margin"
+              matTooltip="Finish working on this part"
+            >
+              <mat-icon>done</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumnsPart"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumnsPart"></tr>
+      </table>
+    </mat-card>
+  </div>
+</div>
+
+<div class="footer">
+  <mat-toolbar>
+    <mat-toolbar-row class="justify-center">
+      <app-footer></app-footer>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>

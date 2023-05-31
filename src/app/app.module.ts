@@ -9,11 +9,15 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 import { httpLoaderFactory } from './factories/http-loader-factory';
 import { loadDefaultLanguage } from './factories/app-initializer-factory';
+import { InfoDialogComponent } from './dialogs/info-dialog/info-dialog.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    
+    
     
   ],
   imports: [

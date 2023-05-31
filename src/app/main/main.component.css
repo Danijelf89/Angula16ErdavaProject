@@ -1,27 +1,72 @@
-.footer{
-    position: fixed;
-bottom: 0;
+.footer {
+  position: absolute;
+  bottom: 0px;
+
+  left: 0px;
+  right: 0px;
+  overflow: hidden;
 }
 
-.justify-center{
-    justify-content: center;
+.justify-center {
+  justify-content: center;
 }
 
-.login-form {
-    height: 200px;
-    width: 400px;
-  
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -100px;
-    margin-left: -250px;
-  }
+.header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
 
-  .take-all-space{
+  right: 0px;
+  overflow: hidden;
+}
+
+.margin-top5 {
+  margin-top: 5px;
+}
+
+.padding5 {
+  padding: 5px;
+}
+
+.parrent {
+  display: flex; /* establish flex container */
+  flex-direction: row;
+  column-gap: 50px;
+
+  position: absolute;
+  top: 100px;
+  bottom: 100px;
+  left: 0px;
+  right: 0px;
+  overflow: auto;
+}
+
+.child1 {
+  width: -webkit-fill-available;
+  padding: 5px;
+}
+
+.child2 {
+  padding: 5px;
+}
+
+.child3 {
+  width: -webkit-fill-available;
+  padding: 5px;
+}
+
+.buttonVertMiddle {
+  top: 10%;
+}
+
+.fab-button-margin {
+  margin: 5px;
+}
+
+.allign-center{
+    text-align: center;
+}
+
+.take-all-space{
     width: -webkit-fill-available;
-}
-
-.margin-top5{
-    margin-top: 5px;
 }
