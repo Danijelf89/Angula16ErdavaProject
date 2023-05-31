@@ -55,10 +55,10 @@ export class MainService {
 
                 let test = this.takeAnotherPart(data);
 
-                //toList.push(this.takeAnotherPart(data));
-
-                if(test == null){
-                  this.matDialogRef.open(InfoDialogComponent, {data: `There are no avaliable parts`});
+                if (test == null) {
+                  this.matDialogRef.open(InfoDialogComponent, {
+                    data: `There are no avaliable parts`,
+                  });
                   return;
                 }
 
@@ -91,8 +91,6 @@ export class MainService {
   }
 
   takeAnotherPart(data: Parts[]): Parts {
-    return  data.filter((x) => x.status == 'Avaliable')[0];
-
-    
+    return data.filter((x) => x.status == 'Avaliable')[0];
   }
 }
